@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CompanyX"
+  DTS:DTSID="{89B317D9-854D-4EEF-9EB5-348BFFA2BBF2}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-18L9IFI\MSSQLSERVER1;User ID=sa;Initial Catalog=CompanyX;Provider=SQLOLEDB.1;Application Name=SSIS-CompanyX ETL-{89B317D9-854D-4EEF-9EB5-348BFFA2BBF2}DESKTOP-18L9IFI\MSSQLSERVER1.CompanyX.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1TWkCcwOM0qIFQFXtIbW0AAAAAACAAAAAAAQZgAAAAEAACAAAAAX0iXTMb3qN+EVmuhRykH8xanIIR2puZH7QTpz7LYQNAAAAAAOgAAAAAIAACAAAACo0+g8dwNL3Y1agZpNCqLmRCug56tl6FmyJyiF7pFKgYAAAAAbeSGmNScqpegmlHBK0T8KGNtUg1QnbhMvP2FEtmWjoShdw55REu3ozOHTvBOuKoa9bIL4l05UNbXI2+N8ZLREZ0C2MqbY9tkOzP99TKhyOrKFfyq25QMlRCDl/WI2OrGwMucJQbZJNOUkDkPUDSyHxlx9dJ3KLMsK20RoMDSSWUAAAACnSE3ZA1X3C4ABZDPgfMDtyGL+JumHkc9LYPbSva8/1jvc+CdFHh1zbuomOUGycbQlp2qk2HYs3kFQIG5Rz3Es</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
