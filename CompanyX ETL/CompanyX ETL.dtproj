@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-18L9IFI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1TWkCcwOM0qIFQFXtIbW0AAAAAACAAAAAAAQZgAAAAEAACAAAADUs2EM+a8DpWT4GgH6G9yiDlFC7lmpciiSYKqED77boQAAAAAOgAAAAAIAACAAAAA4dbdmsy9Z0w3vFWSVTKh9w+s7ZaujKB1Zq5s71yMO/ZAAAABOwmw169cpM3w/YDp3oODWhyRLoOCYMV2D9mCKsAyQ7dblHaL5Q0bUlCVtnY3xWqXVqrgn144ygAZsquElo/AZg2T1F7MpY10zFTriAFlf8xwDX7Np/niJkGJT8ER0Ww1GxVDx1vLY3QcRY0nh57Tz7tLzip0OUvdsajiuBVmL9wdW1SF+y0Vc/yZHRZDddhZAAAAAMq4+R+5HLZhVzSy8CeXvSLGKWuqQvKQYu0CTx4TiA/9hUMDe+Zg4m2VO3OdUIh+VTMZOpIFl7n234FUVQpcu7w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1TWkCcwOM0qIFQFXtIbW0AAAAAACAAAAAAAQZgAAAAEAACAAAAD8BCdKA6ucb+G3khpKj9dqTP0Ovh4Q/BuxzcTKflMsnAAAAAAOgAAAAAIAACAAAAA2A1c9zSyeSjEr0S9zE5v2Wl+C6Mqd5QWYs8DN81oC8ZAAAADUogkJUqT58udMrxITgjiNX0qO5G6Mof02mOKvNadL0wuoIXiAWnCrJec9wxibHqkhvDh16V+yQzb+ACzscHU2B6hb844MpGxBgcvCnlD5B9aICLlUqfHrHY4zRBN6hrC977Q2YC/SLIr/0N1r3A/Ym5tLdhd6R6yxDHJGgU/FLN9mdqE4X/9jgWrQFMSetGJAAAAALiEaSgcw+oLTQgTR5JAHuQvLaSBL94iy23eNFg6hrFpDxWX+fCoxuQoFYoWKdtlqDlZCRoUgAcF/6w47TY4+9A==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -37,6 +37,8 @@
           <SSIS:Package SSIS:Name="DimSalesTerritory.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimPromotion.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimProductSubcategory.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="FactInternetSales.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DimGeography.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="CompanyX.conmgr" />
@@ -384,10 +386,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">34</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{52427CAB-D813-48C5-9D27-F4318C9BB88C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F004E069-CCD2-414D-BC51-7A489C4A19F4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -456,6 +458,40 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{37B5BB95-18AB-43E6-8710-B8335388FED9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="FactInternetSales.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{166FD2F3-0DBF-4DF9-B6E5-95DA095DB998}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">FactInternetSales</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{628CE22F-8E52-40CC-97F0-83A02DC2C409}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DimGeography.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F86EFB15-1DE6-401F-821D-E44D157BED5F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{15B0E83D-047A-4909-A3AD-349E13B9DDA2}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
