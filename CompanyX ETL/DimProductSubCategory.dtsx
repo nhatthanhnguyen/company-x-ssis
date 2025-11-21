@@ -11,20 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimProductSubcategory"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{55667DEC-509A-476A-BDE4-477B60795278}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{37B5BB95-18AB-43E6-8710-B8335388FED9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Load DimProductSubcategory Data Flow Task"
+      DTS:refId="Package\Load DimProductSubcategory"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{A38FA139-4774-45EA-B80D-91C24DD1B413}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load DimProductSubcategory Data Flow Task"
+      DTS:ObjectName="Load DimProductSubcategory"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,7 +32,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup"
+              refId="Package\Load DimProductSubcategory\DimProductCategory Lookup"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -88,7 +88,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]};</property>
+                  name="ParameterMap">#{Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -100,7 +100,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Connections[OleDbConnection]"
+                  refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Connections[OleDbConnection]"
                   connectionManagerID="{ED713992-4054-44A0-907A-79D896E0C603}:external"
                   connectionManagerRefId="Project.ConnectionManagers[CompanyXDW]"
                   description="Connection manager used to access lookup data."
@@ -108,14 +108,14 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Inputs[Lookup Input]"
+                  refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Inputs[Lookup Input].Columns[ProductCategoryID]"
+                      refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Inputs[Lookup Input].Columns[ProductCategoryID]"
                       cachedDataType="i4"
                       cachedName="ProductCategoryID"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]">
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -133,39 +133,39 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Match Output]"
+                  refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup No Match Output]"
+                  refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Error Output]"
+                  refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -174,11 +174,11 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination"
+              refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="DimProductSubcategory OLE DB Destination"
+              name="DimProductSubcategory Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -211,7 +211,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -223,7 +223,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -231,7 +231,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Connections[OleDbConnection]"
                   connectionManagerID="{ED713992-4054-44A0-907A-79D896E0C603}:external"
                   connectionManagerRefId="Project.ConnectionManagers[CompanyXDW]"
                   description="The OLE DB runtime connection used to access the database."
@@ -239,49 +239,49 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductSubcategoryID]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].Columns[ProductSubcategoryID]"
                       cachedDataType="i4"
                       cachedName="ProductSubcategoryID"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryAlternateKey]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]" />
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryAlternateKey]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]" />
                     <inputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].Columns[Name]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Name"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EnglishProductSubcategoryName]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]" />
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[EnglishProductSubcategoryName]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[Name]" />
                     <inputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductCategoryID]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].Columns[ProductCategoryID]"
                       cachedDataType="i4"
                       cachedName="ProductCategoryID"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]" />
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryKey]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryKey]"
                       dataType="i4"
                       name="ProductSubcategoryKey" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryAlternateKey]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryAlternateKey]"
                       dataType="i4"
                       name="ProductSubcategoryAlternateKey" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EnglishProductSubcategoryName]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[EnglishProductSubcategoryName]"
                       dataType="wstr"
                       length="50"
                       name="EnglishProductSubcategoryName" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
                       dataType="i4"
                       name="ProductCategoryKey" />
                   </externalMetadataColumns>
@@ -289,22 +289,22 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -313,11 +313,312 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source"
+              refId="Package\Load DimProductSubcategory\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimProductSubcategory] SET [EnglishProductSubcategoryName] = ?,[ProductCategoryKey] = ? WHERE [ProductSubcategoryAlternateKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimProductSubcategory\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="{ED713992-4054-44A0-907A-79D896E0C603}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CompanyXDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProductCategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductCategoryID"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]" />
+                    <inputColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProductSubcategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductSubcategoryID"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">1</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimProductSubcategory\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimProductSubcategory\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimProductSubcategory\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimProductSubcategory\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimProductSubcategory\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimProductSubcategory\ProductCategory SCD"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="ProductCategory SCD"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [EnglishProductSubcategoryName], [ProductCategoryKey], [ProductSubcategoryAlternateKey] FROM [dbo].[DimProductSubcategory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Connections[LookupConnection]"
+                  connectionManagerID="{ED713992-4054-44A0-907A-79D896E0C603}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CompanyXDW]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].ExternalColumns[EnglishProductSubcategoryName]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[Name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].Columns[ProductCategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductCategoryID"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].ExternalColumns[ProductCategoryKey]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].Columns[ProductSubcategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductSubcategoryID"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].ExternalColumns[ProductSubcategoryAlternateKey]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].ExternalColumns[EnglishProductSubcategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="EnglishProductSubcategoryName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].ExternalColumns[ProductCategoryKey]"
+                      dataType="i4"
+                      name="ProductCategoryKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input].ExternalColumns[ProductSubcategoryAlternateKey]"
+                      dataType="i4"
+                      name="ProductSubcategoryAlternateKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimProductSubcategory\ProductSubcategory Source"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="ProductSubcategory OLE DB Source"
+              name="ProductSubcategory Source"
               usesDispositions="true"
               version="7">
               <properties>
@@ -362,7 +663,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Connections[OleDbConnection]"
+                  refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Connections[OleDbConnection]"
                   connectionManagerID="{89B317D9-854D-4EEF-9EB5-348BFFA2BBF2}:external"
                   connectionManagerRefId="Project.ConnectionManagers[CompanyX]"
                   description="The OLE DB runtime connection used to access the database."
@@ -370,122 +671,122 @@ where [refTable].[ProductCategoryKey] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output]"
+                  refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductSubcategoryID]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[ProductSubcategoryID]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]"
                       name="ProductSubcategoryID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductCategoryID]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[ProductCategoryID]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]"
                       name="ProductCategoryID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       length="50"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[Name]"
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[rowguid]"
                       dataType="guid"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[rowguid]"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[rowguid]"
                       name="rowguid"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      externalMetadataColumnId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
                       name="ModifiedDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductSubcategoryID]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[ProductSubcategoryID]"
                       dataType="i4"
                       name="ProductSubcategoryID" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductCategoryID]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[ProductCategoryID]"
                       dataType="i4"
                       name="ProductCategoryID" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       dataType="wstr"
                       length="50"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[rowguid]"
                       dataType="guid"
                       name="rowguid" />
                     <externalMetadataColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
                       dataType="dbTimeStamp"
                       name="ModifiedDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductSubcategoryID]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ProductSubcategoryID]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductSubcategoryID]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ProductSubcategoryID]"
                       name="ProductSubcategoryID" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductCategoryID]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ProductCategoryID]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductCategoryID]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ProductCategoryID]"
                       name="ProductCategoryID" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[Name]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
                       dataType="guid"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[rowguid]"
                       name="rowguid" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
                       name="ModifiedDate" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -496,15 +797,25 @@ where [refTable].[ProductCategoryKey] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Load DimProductSubcategory Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Lookup Match Output"
-              startId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Outputs[Lookup Match Output]" />
+              refId="Package\Load DimProductSubcategory.Paths[Changing Attribute Updates Output]"
+              endId="Package\Load DimProductSubcategory\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\Load DimProductSubcategory Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup.Inputs[Lookup Input]"
+              refId="Package\Load DimProductSubcategory.Paths[Lookup Match Output]"
+              endId="Package\Load DimProductSubcategory\ProductCategory SCD.Inputs[Slowly Changing Dimension Input]"
+              name="Lookup Match Output"
+              startId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load DimProductSubcategory.Paths[New Output]"
+              endId="Package\Load DimProductSubcategory\DimProductSubcategory Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Load DimProductSubcategory\ProductCategory SCD.Outputs[New Output]" />
+            <path
+              refId="Package\Load DimProductSubcategory.Paths[OLE DB Source Output]"
+              endId="Package\Load DimProductSubcategory\DimProductCategory Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output]" />
+              startId="Package\Load DimProductSubcategory\ProductSubcategory Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -523,43 +834,39 @@ where [refTable].[ProductCategoryKey] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="292.8,41.6"
-          Id="Package\Load DimProductSubcategory Data Flow Task"
+          Size="216.8,41.6"
+          Id="Package\Load DimProductSubcategory"
           TopLeft="163.357143193179,115.617646962301" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load DimProductSubcategory Data Flow Task">
+    design-time-name="Package\Load DimProductSubcategory">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="247.2,41.6"
-          Id="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source"
-          TopLeft="97.6428572751429,29.3823529465388" />
-        <NodeLayout
-          Size="286.4,41.6"
-          Id="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination"
-          TopLeft="84.7857143267686,277.323529226093" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="212,41.6"
-          Id="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup"
-          TopLeft="115.714285960611,142.235293992972" />
+          Id="Package\Load DimProductSubcategory\DimProductCategory Lookup"
+          TopLeft="290.1,107.1" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Load DimProductSubcategory\ProductSubcategory Source"
+          TopLeft="292.1,5.50000000000007" />
         <EdgeLayout
-          Id="Package\Load DimProductSubcategory Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="221.478571617877,70.9823529465388">
+          Id="Package\Load DimProductSubcategory.Paths[OLE DB Source Output]"
+          TopLeft="396.1,47.1000000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71.2529410464334"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,63.7529410464334">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.7529410464334" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -568,27 +875,111 @@ where [refTable].[ProductCategoryKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Load DimProductSubcategory\ProductCategory SCD"
+          TopLeft="306.5,208.7" />
         <EdgeLayout
-          Id="Package\Load DimProductSubcategory Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="224.85000014369,183.835293992972">
+          Id="Package\Load DimProductSubcategory.Paths[Lookup Match Output]"
+          TopLeft="396.1,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,93.488235233121"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,85.988235233121">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,85.988235233121" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,37.1894301165605,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="247.2,41.6"
+          Id="Package\Load DimProductSubcategory\DimProductSubcategory Destination"
+          TopLeft="5.50000000000009,310.3" />
+        <EdgeLayout
+          Id="Package\Load DimProductSubcategory.Paths[New Output]"
+          TopLeft="367.566666666667,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-238.466666666667,60"
+              Start="0,0"
+              End="-238.466666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.3185840707965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.3185840707965"
+                    Point2="0,24.3185840707965"
+                    Point3="-4,24.3185840707965" />
+                  <mssgle:LineSegment
+                    End="-234.466666666667,24.3185840707965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-234.466666666667,24.3185840707965"
+                    Point2="-238.466666666667,24.3185840707965"
+                    Point3="-238.466666666667,28.3185840707965" />
+                  <mssgle:LineSegment
+                    End="-238.466666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-146.324720052083,29.3185840707965,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Load DimProductSubcategory\OLE DB Command"
+          TopLeft="313.7,310.3" />
+        <EdgeLayout
+          Id="Package\Load DimProductSubcategory.Paths[Changing Attribute Updates Output]"
+          TopLeft="424.633333333333,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28.5333333333334,60"
+              Start="0,0"
+              End="-28.5333333333334,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.3185840707965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.3185840707965"
+                    Point2="0,24.3185840707965"
+                    Point3="-4,24.3185840707965" />
+                  <mssgle:LineSegment
+                    End="-24.5333333333334,24.3185840707965" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.5333333333334,24.3185840707965"
+                    Point2="-28.5333333333334,24.3185840707965"
+                    Point3="-28.5333333333334,28.3185840707965" />
+                  <mssgle:LineSegment
+                    End="-28.5333333333334,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-92.8005729166667,29.3185840707965,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -596,20 +987,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimProductSubcategory Data Flow Task\DimProductSubcategory OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load DimProductSubcategory Data Flow Task\DimProductCategory Lookup">
+    design-time-name="Package\Load DimProductSubcategory\DimProductCategory Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -632,7 +1010,7 @@ where [refTable].[ProductCategoryKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimProductSubcategory Data Flow Task\ProductSubcategory OLE DB Source">
+    design-time-name="Package\Load DimProductSubcategory\ProductSubcategory Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -641,6 +1019,55 @@ where [refTable].[ProductCategoryKey] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimProductSubcategory\ProductCategory SCD">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionID&gt;{ED713992-4054-44A0-907A-79D896E0C603}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimProductSubcategory]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;EnglishProductSubcategoryName&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductCategoryID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ProductCategoryKey&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;ProductSubcategory OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductSubcategoryID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;ProductSubcategoryAlternateKey&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;true&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
