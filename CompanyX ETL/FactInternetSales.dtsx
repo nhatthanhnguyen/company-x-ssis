@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FactInternetSales"
   DTS:PackageType="5"
-  DTS:VersionBuild="65"
-  DTS:VersionGUID="{CE2C73D8-CF65-4171-BD1D-2E44A72F4292}">
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{6D75A709-5398-48CE-8FB7-B8C246B4C81C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1144,7 +1144,7 @@ where [refTable].[PromotionAlternateKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactInternetSales\328:invalid};</property>
+                  name="ParameterMap">#{Package\Load FactInternetSales\455:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1315,7 +1315,7 @@ where [refTable].[SalesTerritoryAlternateKey] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactInternetSales\296:invalid};</property>
+                  name="ParameterMap">#{Package\Load FactInternetSales\456:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2550,7 +2550,7 @@ where [refTable].[CustomerID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactInternetSales\292:invalid};</property>
+                  name="ParameterMap">#{Package\Load FactInternetSales\457:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2709,7 +2709,7 @@ where [refTable].[ProductID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactInternetSales\326:invalid};</property>
+                  name="ParameterMap">#{Package\Load FactInternetSales\458:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2902,331 +2902,343 @@ where [refTable].[ProductID] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="188.8,41.6"
-          Id="Package\Load FactInternetSales\OLTP Customer Lookup"
-          TopLeft="35.1,107.1" />
-        <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\Load FactInternetSales\DimPromotion Lookup"
-          TopLeft="38.3000000000001,716.699999999999" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Load FactInternetSales\Derived Column"
-          TopLeft="53.1000000000001,1123.1" />
-        <NodeLayout
-          Size="208.8,41.6"
-          Id="Package\Load FactInternetSales\DimDate OrderDate Lookup"
-          TopLeft="25.1000000000001,818.299999999999" />
-        <NodeLayout
-          Size="199.2,41.6"
-          Id="Package\Load FactInternetSales\DimSalesTerritory Lookup"
-          TopLeft="29.9000000000001,411.9" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Load FactInternetSales\OLTP Product Lookup"
-          TopLeft="39.5000000000001,513.5" />
-        <NodeLayout
           Size="201.6,41.6"
           Id="Package\Load FactInternetSales\DimDate ShipDate Lookup"
-          TopLeft="28.7000000000001,919.899999999999" />
+          TopLeft="645.842858456592,254.605882936097" />
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\Load FactInternetSales\DimCustomer Lookup"
-          TopLeft="39.9000000000001,310.3" />
+          TopLeft="645.614287003692,74.7705884417447" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Load FactInternetSales\OLE DB Destination"
-          TopLeft="44.3000000000002,1224.7" />
+          TopLeft="15.0142856519442,336.876471366448" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\Load FactInternetSales\OLTP Customer Lookup"
+          TopLeft="288.671429111216,6.15882361789062" />
         <NodeLayout
           Size="200.8,41.6"
           Id="Package\Load FactInternetSales\DimDate DueDate Lookup"
-          TopLeft="29.1000000000001,1021.5" />
-        <NodeLayout
-          Size="248,41.6"
-          Id="Package\Load FactInternetSales\Convert AccountNumber Conversion"
-          TopLeft="5.50000000000003,208.7" />
+          TopLeft="346.957143533778,253.735294790623" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Load FactInternetSales\DimProduct Lookup"
-          TopLeft="44.3000000000001,615.099999999999" />
+          TopLeft="15.7285713677505,165.452941570603" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Load FactInternetSales\OLE DB Source"
+          TopLeft="31.128571378394,10.8529411717785" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Load FactInternetSales\DimPromotion Lookup"
+          TopLeft="318.300000596047,161.523529898397" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Load FactInternetSales\Derived Column"
+          TopLeft="24.5285713677504,249.041177236735" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Load FactInternetSales\OLTP Product Lookup"
+          TopLeft="13.7857142309754,71.5000003874301" />
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Load FactInternetSales\DimDate OrderDate Lookup"
+          TopLeft="643.671429888205,163.711765279653" />
+        <NodeLayout
+          Size="199.2,41.6"
+          Id="Package\Load FactInternetSales\DimSalesTerritory Lookup"
+          TopLeft="300.614286290565,70.0764708878568" />
+        <NodeLayout
+          Size="248,41.6"
+          Id="Package\Load FactInternetSales\Convert AccountNumber Conversion"
+          TopLeft="601.928572698211,8.3470589991465" />
         <EdgeLayout
-          Id="Package\Load FactInternetSales.Paths[Lookup Match Output8]"
-          TopLeft="129.5,1063.1">
+          Id="Package\Load FactInternetSales.Paths[Data Conversion Output]"
+          TopLeft="725.928572698211,49.9470589991465">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="9.28571430548118,24.8235294425982"
               Start="0,0"
-              End="0,52.5">
+              End="9.28571430548118,17.3235294425982">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,8.41176472129912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.41176472129912"
+                    Point2="0,12.4117647212991"
+                    Point3="4,12.4117647212991" />
+                  <mssgle:LineSegment
+                    End="5.28571430548118,12.4117647212991" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.28571430548118,12.4117647212991"
+                    Point2="9.28571430548118,12.4117647212991"
+                    Point3="9.28571430548118,16.4117647212991" />
+                  <mssgle:LineSegment
+                    End="9.28571430548118,17.3235294425982" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactInternetSales.Paths[OLE DB Source Output]"
+          TopLeft="180.728571378394,29.3058823948345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107.942857732822,0"
+              Start="0,0"
+              End="100.442857732822,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.442857732822,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactInternetSales.Paths[Lookup Match Output8]"
+          TopLeft="346.957143533778,272.188236013679">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-169.628572166027,0"
+              Start="0,0"
+              End="-162.128572166027,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-162.128572166027,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="-129.255672801764,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output7]"
-          TopLeft="129.5,961.499999999999">
+          TopLeft="645.842858456592,274.97058886336">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="-98.085714922815,0"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="-90.585714922815,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="-90.585714922815,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-93.4842441801575,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output6]"
-          TopLeft="129.5,859.899999999999">
+          TopLeft="747.357144172399,205.311765279653">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,49.2941176564433"
               Start="0,0"
-              End="0,52.5">
+              End="0,41.7941176564433">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,41.7941176564433" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,15.0923713282216,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output5]"
-          TopLeft="129.5,758.299999999999">
+          TopLeft="500.700000596047,183.417647589025">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="142.971429292158,0"
               Start="0,0"
-              End="0,52.5">
+              End="135.471429292158,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="135.471429292158,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="19.544327927329,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output4]"
-          TopLeft="129.5,656.699999999999">
+          TopLeft="186.128571367751,184.2882357345">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="132.171429228296,0"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="124.671429228296,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="124.671429228296,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="14.1443278953981,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output3]"
-          TopLeft="129.5,555.1">
+          TopLeft="102.357142799363,113.10000038743">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,52.3529411831728"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,44.8529411831728">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,44.8529411831728" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,16.6217830915864,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output2]"
-          TopLeft="129.5,453.5">
+          TopLeft="300.614286290565,91.5882356376434">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="-106.82857205959,0"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="-99.32857205959,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="-99.32857205959,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              BoundingBox="-97.855672748545,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output1]"
-          TopLeft="129.5,351.9">
+          TopLeft="645.614287003692,93.2235296648008">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="-145.800000713127,0"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="-138.300000713127,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="-138.300000713127,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-117.341387075314,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Lookup Match Output]"
-          TopLeft="129.5,148.7">
+          TopLeft="477.471429111216,28.0529413085186">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="124.457143586996,0"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="116.957143586996,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="116.957143586996,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="10.2871850747479,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactInternetSales.Paths[Derived Column Output]"
-          TopLeft="129.5,1164.7">
+          TopLeft="100.571428509847,290.641177236735">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,46.2352941297125"
               Start="0,0"
-              End="0,52.5">
+              End="0,38.7352941297125">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactInternetSales.Paths[Data Conversion Output]"
-          TopLeft="129.5,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Load FactInternetSales\OLE DB Source"
-          TopLeft="54.7,5.49999999999995" />
-        <EdgeLayout
-          Id="Package\Load FactInternetSales.Paths[OLE DB Source Output]"
-          TopLeft="129.5,47.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,38.7352941297125" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3239,127 +3251,12 @@ where [refTable].[ProductID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactInternetSales\OLTP Customer Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Sales].[Customer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactInternetSales\DimPromotion Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimPromotion]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactInternetSales\DimDate OrderDate Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactInternetSales\DimSalesTerritory Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimSalesTerritory]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactInternetSales\OLTP Product Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Production].[Product]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load FactInternetSales\DimDate ShipDate Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3369,7 +3266,7 @@ where [refTable].[ProductID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3413,12 +3310,35 @@ where [refTable].[ProductID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Load FactInternetSales\OLTP Customer Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Sales].[Customer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load FactInternetSales\DimDate DueDate Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3428,7 +3348,7 @@ where [refTable].[ProductID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3461,6 +3381,98 @@ where [refTable].[ProductID] = ?</property>
   <PipelineComponentMetadata
     design-time-name="Package\Load FactInternetSales\OLE DB Source">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactInternetSales\DimPromotion Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimPromotion]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactInternetSales\OLTP Product Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Production].[Product]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactInternetSales\DimDate OrderDate Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactInternetSales\DimSalesTerritory Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimSalesTerritory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
