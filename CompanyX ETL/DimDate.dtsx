@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Date"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{26333CEF-2486-4FEA-8BA7-FC6A7B50BBE5}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{323F8E84-6EF5-4B5A-B8C2-AE9FA2DF530F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -32,6 +32,907 @@
           version="1">
           <components>
             <component
+              refId="Package\Load DimDate\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[FullDate]"
+                      cachedDataType="date"
+                      cachedName="FullDate"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FullDate]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[DateName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="DateName"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateName]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfWeek]"
+                      cachedDataType="r8"
+                      cachedName="DayOfWeek"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[DayNameOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="DayNameOfWeek"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfMonth]"
+                      cachedDataType="r8"
+                      cachedName="DayOfMonth"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfYear]"
+                      cachedDataType="r8"
+                      cachedName="DayOfYear"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[WeekdayWeekend]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="WeekdayWeekend"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekdayWeekend]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[WeekOfYear]"
+                      cachedDataType="r8"
+                      cachedName="WeekOfYear"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[MonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MonthName"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[MonthOfYear]"
+                      cachedDataType="r8"
+                      cachedName="MonthOfYear"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[IsLastDayOfMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="IsLastDayOfMonth"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[IsLastDayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarQuarter]"
+                      cachedDataType="r8"
+                      cachedName="CalendarQuarter"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYear]"
+                      cachedDataType="r8"
+                      cachedName="CalendarYear"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYearMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CalendarYearMonth"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYearQtr]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CalendarYearQtr"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearQtr]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[FiscalMonthOfYear]"
+                      cachedDataType="r8"
+                      cachedName="FiscalMonthOfYear"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalMonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[FiscalQuarter]"
+                      cachedDataType="r8"
+                      cachedName="FiscalQuarter"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalQuarter]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[FiscalYear]"
+                      cachedDataType="r8"
+                      cachedName="FiscalYear"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[FiscalYearMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FiscalYearMonth"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input].Columns[FiscalYearQtr]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FiscalYearQtr"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearQtr]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]"
+                      name="Copy of FullDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FullDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DateName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DateName]"
+                      name="Copy of DateName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfWeek]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfWeek]"
+                      name="Copy of DayOfWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfWeek]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayNameOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayNameOfWeek]"
+                      name="Copy of DayNameOfWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayNameOfWeek]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfMonth]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfMonth]"
+                      name="Copy of DayOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfMonth]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfYear]"
+                      name="Copy of DayOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekdayWeekend]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekdayWeekend]"
+                      name="Copy of WeekdayWeekend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekdayWeekend]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekOfYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekOfYear]"
+                      name="Copy of WeekOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekOfYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthName]"
+                      name="Copy of MonthName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthOfYear]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthOfYear]"
+                      name="Copy of MonthOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthOfYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IsLastDayOfMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IsLastDayOfMonth]"
+                      name="Copy of IsLastDayOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[IsLastDayOfMonth]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarQuarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarQuarter]"
+                      name="Copy of CalendarQuarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarQuarter]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYear]"
+                      name="Copy of CalendarYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYearMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYearMonth]"
+                      name="Copy of CalendarYearMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearMonth]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYearQtr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYearQtr]"
+                      name="Copy of CalendarYearQtr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearQtr]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalMonthOfYear]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalMonthOfYear]"
+                      name="Copy of FiscalMonthOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalMonthOfYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalQuarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalQuarter]"
+                      name="Copy of FiscalQuarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalQuarter]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYear]"
+                      name="Copy of FiscalYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearMonth]"
+                      name="Copy of FiscalYearMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearMonth]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearQtr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearQtr]"
+                      name="Copy of FiscalYearQtr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearQtr]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimDate\DimDate Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimDate Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimDate\DimDate Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{ED713992-4054-44A0-907A-79D896E0C603}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CompanyXDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FullDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of FullDate"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of DateName]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="Copy of DateName"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateName]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DateName]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of DayOfWeek]"
+                      cachedDataType="ui2"
+                      cachedName="Copy of DayOfWeek"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of DayNameOfWeek]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of DayNameOfWeek"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of DayOfMonth]"
+                      cachedDataType="ui2"
+                      cachedName="Copy of DayOfMonth"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfMonth]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of DayOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="Copy of DayOfYear"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DayOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of WeekdayWeekend]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of WeekdayWeekend"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekdayWeekend]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekdayWeekend]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of WeekOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="Copy of WeekOfYear"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WeekOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of MonthName]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of MonthName"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthName]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of MonthOfYear]"
+                      cachedDataType="ui1"
+                      cachedName="Copy of MonthOfYear"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthOfYear]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of IsLastDayOfMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Copy of IsLastDayOfMonth"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLastDayOfMonth]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IsLastDayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of CalendarQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="Copy of CalendarQuarter"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of CalendarYear]"
+                      cachedDataType="ui2"
+                      cachedName="Copy of CalendarYear"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of CalendarYearMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of CalendarYearMonth"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearMonth]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYearMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of CalendarYearQtr]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of CalendarYearQtr"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearQtr]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CalendarYearQtr]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FiscalMonthOfYear]"
+                      cachedDataType="ui1"
+                      cachedName="Copy of FiscalMonthOfYear"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalMonthOfYear]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalMonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FiscalQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="Copy of FiscalQuarter"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalQuarter]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalQuarter]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FiscalYear]"
+                      cachedDataType="ui2"
+                      cachedName="Copy of FiscalYear"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYear]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYear]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FiscalYearMonth]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of FiscalYearMonth"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearMonth]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearMonth]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FiscalYearQtr]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of FiscalYearQtr"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearQtr]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearQtr]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      dataType="wstr"
+                      length="10"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateName]"
+                      dataType="wstr"
+                      length="11"
+                      name="DateName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      dataType="ui1"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
+                      dataType="wstr"
+                      length="10"
+                      name="DayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfMonth]"
+                      dataType="ui1"
+                      name="DayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      dataType="i2"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekdayWeekend]"
+                      dataType="wstr"
+                      length="10"
+                      name="WeekdayWeekend" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      dataType="ui1"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      dataType="wstr"
+                      length="10"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthOfYear]"
+                      dataType="ui1"
+                      name="MonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLastDayOfMonth]"
+                      dataType="wstr"
+                      length="1"
+                      name="IsLastDayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      dataType="ui1"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearMonth]"
+                      dataType="wstr"
+                      length="10"
+                      name="CalendarYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearQtr]"
+                      dataType="wstr"
+                      length="10"
+                      name="CalendarYearQtr" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalMonthOfYear]"
+                      dataType="ui1"
+                      name="FiscalMonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalQuarter]"
+                      dataType="ui1"
+                      name="FiscalQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYear]"
+                      dataType="i4"
+                      name="FiscalYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearMonth]"
+                      dataType="wstr"
+                      length="10"
+                      name="FiscalYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearQtr]"
+                      dataType="wstr"
+                      length="10"
+                      name="FiscalYearQtr" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimDate\DimDate Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimDate\DimDate Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimDate\DimDate Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load DimDate\Excel Source"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -47,7 +948,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">'Calendar with calcs$'</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -74,6 +975,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimDate\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="{4569E38B-4138-4CA6-B709-245732AAFC49}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DimDateExcel]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -81,14 +984,425 @@
                 <output
                   refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output]"
                   name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DateKey]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FullDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FullDate]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FullDate]"
+                      name="FullDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DateName]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateName]"
+                      name="DateName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfWeek]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayOfWeek]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfWeek]"
+                      name="DayOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayNameOfWeek]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayNameOfWeek]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayNameOfWeek]"
+                      name="DayNameOfWeek"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfMonth]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayOfMonth]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfMonth]"
+                      name="DayOfMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfYear]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayOfYear]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DayOfYear]"
+                      name="DayOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekdayWeekend]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[WeekdayWeekend]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekdayWeekend]"
+                      name="WeekdayWeekend"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekOfYear]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[WeekOfYear]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[WeekOfYear]"
+                      name="WeekOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[MonthName]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthName]"
+                      name="MonthName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthOfYear]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[MonthOfYear]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[MonthOfYear]"
+                      name="MonthOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[IsLastDayOfMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[IsLastDayOfMonth]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[IsLastDayOfMonth]"
+                      name="IsLastDayOfMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarQuarter]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYear]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYear]"
+                      name="CalendarYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarYearMonth]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearMonth]"
+                      name="CalendarYearMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearQtr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarYearQtr]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[CalendarYearQtr]"
+                      name="CalendarYearQtr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalMonthOfYear]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalMonthOfYear]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalMonthOfYear]"
+                      name="FiscalMonthOfYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalQuarter]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalQuarter]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalQuarter]"
+                      name="FiscalQuarter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYear]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalYear]"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYear]"
+                      name="FiscalYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearMonth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalYearMonth]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearMonth]"
+                      name="FiscalYearMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearQtr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalYearQtr]"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[FiscalYearQtr]"
+                      name="FiscalYearQtr"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DateKey]"
+                      dataType="wstr"
+                      length="255"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FullDate]"
+                      dataType="date"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DateName]"
+                      dataType="wstr"
+                      length="255"
+                      name="DateName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayOfWeek]"
+                      dataType="r8"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayNameOfWeek]"
+                      dataType="wstr"
+                      length="255"
+                      name="DayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayOfMonth]"
+                      dataType="r8"
+                      name="DayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[DayOfYear]"
+                      dataType="r8"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[WeekdayWeekend]"
+                      dataType="wstr"
+                      length="255"
+                      name="WeekdayWeekend" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[WeekOfYear]"
+                      dataType="r8"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[MonthName]"
+                      dataType="wstr"
+                      length="255"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[MonthOfYear]"
+                      dataType="r8"
+                      name="MonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[IsLastDayOfMonth]"
+                      dataType="wstr"
+                      length="255"
+                      name="IsLastDayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarQuarter]"
+                      dataType="r8"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarYear]"
+                      dataType="r8"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarYearMonth]"
+                      dataType="wstr"
+                      length="255"
+                      name="CalendarYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[CalendarYearQtr]"
+                      dataType="wstr"
+                      length="255"
+                      name="CalendarYearQtr" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalMonthOfYear]"
+                      dataType="r8"
+                      name="FiscalMonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalQuarter]"
+                      dataType="r8"
+                      name="FiscalQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalYear]"
+                      dataType="r8"
+                      name="FiscalYear" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalYearMonth]"
+                      dataType="wstr"
+                      length="255"
+                      name="FiscalYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].ExternalColumns[FiscalYearQtr]"
+                      dataType="wstr"
+                      length="255"
+                      name="FiscalYearQtr" />
+                  </externalMetadataColumns>
                 </output>
                 <output
                   refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output]"
                   isErrorOut="true"
                   name="Excel Source Error Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DateKey]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DateKey]"
+                      name="DateKey" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FullDate]"
+                      dataType="date"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FullDate]"
+                      name="FullDate" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DateName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DateName]"
+                      name="DateName" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayOfWeek]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayOfWeek]"
+                      name="DayOfWeek" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayNameOfWeek]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayNameOfWeek]"
+                      name="DayNameOfWeek" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayOfMonth]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayOfMonth]"
+                      name="DayOfMonth" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayOfYear]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[DayOfYear]"
+                      name="DayOfYear" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[WeekdayWeekend]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[WeekdayWeekend]"
+                      name="WeekdayWeekend" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[WeekOfYear]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[WeekOfYear]"
+                      name="WeekOfYear" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[MonthName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[MonthName]"
+                      name="MonthName" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[MonthOfYear]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[MonthOfYear]"
+                      name="MonthOfYear" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[IsLastDayOfMonth]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[IsLastDayOfMonth]"
+                      name="IsLastDayOfMonth" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarQuarter]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarYear]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarYear]"
+                      name="CalendarYear" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarYearMonth]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarYearMonth]"
+                      name="CalendarYearMonth" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarYearQtr]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[CalendarYearQtr]"
+                      name="CalendarYearQtr" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalMonthOfYear]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalMonthOfYear]"
+                      name="FiscalMonthOfYear" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalQuarter]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalQuarter]"
+                      name="FiscalQuarter" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalYear]"
+                      dataType="r8"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalYear]"
+                      name="FiscalYear" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalYearMonth]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalYearMonth]"
+                      name="FiscalYearMonth" />
+                    <outputColumn
+                      refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalYearQtr]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[FiscalYearQtr]"
+                      name="FiscalYearQtr" />
                     <outputColumn
                       refId="Package\Load DimDate\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -107,6 +1421,18 @@
               </outputs>
             </component>
           </components>
+          <paths>
+            <path
+              refId="Package\Load DimDate.Paths[Data Conversion Output]"
+              endId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load DimDate.Paths[Excel Source Output]"
+              endId="Package\Load DimDate\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -134,13 +1460,91 @@
     design-time-name="Package\Load DimDate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Load DimDate\Excel Source"
-          TopLeft="240.000000510897,101.705882263792" />
+          TopLeft="269.285714858953,61.1764705346118" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Load DimDate\DimDate Destination"
+          TopLeft="247.142857668959,226.352940978064" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Load DimDate\Data Conversion"
+          TopLeft="261.428571985084,141.19999988605" />
+        <EdgeLayout
+          Id="Package\Load DimDate.Paths[Excel Source Output]"
+          TopLeft="338.757143422019,102.776470534612">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,38.4235293514382"
+              Start="0,0"
+              End="0,30.9235293514382">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.9235293514382" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimDate.Paths[Data Conversion Output]"
+          TopLeft="336.885714827022,182.79999988605">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,43.5529410920136"
+              Start="0,0"
+              End="0,36.0529410920136">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.0529410920136" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimDate\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimDate\DimDate Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
