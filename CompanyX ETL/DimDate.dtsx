@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Date"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{323F8E84-6EF5-4B5A-B8C2-AE9FA2DF530F}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{23DCD60A-1BE6-46E8-86B2-2118915C9BA6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -165,7 +165,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]"
@@ -679,12 +679,6 @@
                       externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                       lineageId="Package\Load DimDate\Excel Source.Outputs[Excel Source Output].Columns[DateKey]" />
                     <inputColumn
-                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FullDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Copy of FullDate"
-                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
-                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]" />
-                    <inputColumn
                       refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of DateName]"
                       cachedDataType="wstr"
                       cachedLength="11"
@@ -807,6 +801,12 @@
                       cachedName="Copy of FiscalYearQtr"
                       externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FiscalYearQtr]"
                       lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FiscalYearQtr]" />
+                    <inputColumn
+                      refId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].Columns[Copy of FullDate]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of FullDate"
+                      externalMetadataColumnId="Package\Load DimDate\DimDate Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      lineageId="Package\Load DimDate\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
